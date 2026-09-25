@@ -34,7 +34,7 @@ It does **not** flag:
 - disagreement, even blunt disagreement
 - sarcasm, snark, passive-aggressiveness, or condescension
 - criticism of your argument
-- hostility aimed at someone else, such as a person your post is about. Replies trashing them are on your side.
+- frustration directed at someone else, like a person you mention in your post
 - replies to other people in the thread, unless they still clearly go after you
 
 The classifier runs 3 times (configurable), and an account is listed only if **every** run flags it. That filters out one-off borderline calls.
