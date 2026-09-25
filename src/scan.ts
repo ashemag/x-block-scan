@@ -185,7 +185,8 @@ async function classify(openai: OpenAI, original: string, responses: Response[])
     const batch = responses.slice(i, i + BATCH_SIZE);
     const completion = await openai.chat.completions.create({
       model: MODEL,
-      temperature: 0,
+      // Reasoning models reject custom temperature.
+      ...(MODEL.startsWith("gpt-4") ? { temperature: 0 } : {}),
       response_format: { type: "json_object" },
       messages: [
         { role: "system", content: SYSTEM_PROMPT },
